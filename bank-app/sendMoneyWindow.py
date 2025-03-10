@@ -7,7 +7,8 @@ def sendMoneyWindow():
     sendMoneyWindow.geometry("450x350")
     com15 = Font(family="Comic Sans", size=15, weight="bold")
 
-    userLabel = Label(sendMoneyWindow, text="Enter Recipient Username: ", font=com15)
+    userLabel = Label(
+        sendMoneyWindow, text="Enter Recipient Username: ", font=com15)
     userLabel.place(x=40, y=25)
     userLabel = Entry(sendMoneyWindow, font=com15)
     userLabel.place(x=45, y=60)
@@ -24,8 +25,9 @@ def sendMoneyWindow():
                            font=('Comic Sans', 24, 'bold'))
     displayBalance.place(x=40, y=260)
 
-    transfer = Button(sendMoneyWindow, text="Transfer", background="Light Blue", wraplength=150, font=('Comic Sans', 17, 'bold'))
-    transfer.place(x=300,y=140)
+    transfer = Button(sendMoneyWindow, text="Transfer", background="Light Blue",
+                      wraplength=150, font=('Comic Sans', 17, 'bold'))
+    transfer.place(x=300, y=140)
 
     limitLabel = Label(sendMoneyWindow, text="Remaining Daily Limit:", background="Light Blue", wraplength=150,
                        font=('Comic Sans', 17, 'bold'))
