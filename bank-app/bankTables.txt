@@ -1,0 +1,33 @@
+create table credentials
+(
+    username varchar2(20),
+    password varchar2(50),
+    userID int,
+    constraint c_userID UNIQUE (userID)
+);
+
+create table clients
+(
+    name varchar2(20),
+    userID int NOT NULL,
+    password  varchar2(20),
+    email varchar2(20),
+    phone# int,
+    DOB varchar2(20),
+    CONSTRAINT cli_userId foreign key (userID) references credentials (userID)
+);
+
+
+create table BankStuff
+(
+    totalBalance int,
+    limit int,
+    userID int NOT NULL,
+    CONSTRAINT b_userId foreign key (userID) references credentials (userID)
+);
+
+
+
+
+INSERT INTO clients (name, userID, password, email, phone#, DOB)
+VALUES ('John Smith', 'jsmith123', 'password123', 'john@example.com', '123-456-7890', '1980-01-01');
