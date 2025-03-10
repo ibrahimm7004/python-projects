@@ -26,6 +26,7 @@ def loginWindow():
         loginView.destroy()
         mainM()
 
+# forgot password logic:
     def resetPass():
         forgotPass.destroy()
         passLabel.destroy()
@@ -33,17 +34,22 @@ def loginWindow():
         userLabel.destroy()
         userEntry.destroy()
         loginButton.destroy()
-        linkLine = Label(loginView, text="Enter your email to receive reset link: ", font=("Comic Sans", 15))
+        linkLine = Label(
+            loginView, text="Enter your email to receive reset link: ", font=("Comic Sans", 15))
         linkLine.place(x=20, y=60)
-        resetLink = Entry(loginView, background="LemonChiffon2", font=("Comic Sans", 18))
+        resetLink = Entry(loginView, background="LemonChiffon2",
+                          font=("Comic Sans", 18))
         resetLink.place(x=50, y=110)
-        sendLink = Button(loginView, text="Send", font=("Comic Sans", 12), command=sent)
+        sendLink = Button(loginView, text="Send", font=(
+            "Comic Sans", 12), command=sent)
         sendLink.place(x=50, y=150)
 
-    forgotPass = Button(loginView, text="Forgot Password?", wraplength=300, font=("Comic Sans", 12), command=resetPass)
+    forgotPass = Button(loginView, text="Forgot Password?", wraplength=300, font=(
+        "Comic Sans", 12), command=resetPass)
     forgotPass.place(x=140, y=160)
 
-    loginButton = Button(loginView, text="Login",background='PaleGreen1', wraplength=300, font=("Comic Sans", 12), command=send)
+    loginButton = Button(loginView, text="Login", background='PaleGreen1',
+                         wraplength=300, font=("Comic Sans", 12), command=send)
     loginButton.place(x=60, y=160)
 
     loginView.mainloop()
