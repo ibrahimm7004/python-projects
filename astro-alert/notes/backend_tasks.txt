@@ -1,0 +1,91 @@
+(1) Make a ML model using classification, specifically KNN.
+
+	(A) Research, figure out how to make the model.
+	(B) Figure out how to change the part of the KNN algo,
+	    where we will use avg of K neighbours instead of 
+	    majority method.
+	(C) Figure out what value of K we will be using
+
+
+
+(3) Implement the trained model on the original dataset (dataset1), so that it  
+    can generate a column(feature) for that dataset: the Impact Energy.
+
+
+
+
+(4) Figure out what to do further, with the user's input etc.
+	
+	(A) Discussion. Use KNN on just new input provided, and use
+	    trained model to predict that? But what data to use for
+	    training and which features to add, what class(es) to 
+ 	    predict? Can multiple classes be predicted, would we 
+	    have to design different models for that?
+
+
+
+DONE----------------------------------------------------------
+
+(1)  Use impact energy to calc mass instead of the radiated energy that u used Pehle.
+
+
+(2) Adjust units of 2 columns:
+	
+	(A) Total Impact Energy:
+		Change the unit to Kg
+		Multiply entire column's values with 1000,000(1 million - 6 zeroes)
+
+	(B) Mass: 
+		Set unit to Kg.
+
+On dataset1 (csv):
+
+
+    	(A) Add Mass feature.
+
+		-> Step 1: Add column for density.
+
+		-> Step 2: Add column for Mass
+			-> Mass = Density/Volume
+			-> Volume of sphere = 4/3 * pi * r^3
+
+
+	(B) Add Velocity Feature.
+
+		-> Velocity = sqrt((2 * G * M)/(C * A * ρ))
+
+
+EXTRA INFO:
+
+
+DENSITIES (adjust units accordingly):
+
+Crystalline rocks: 2.95 g/cm³ 
+Sedimentary rocks: 2.4 g/cm³
+Metasedimentary: 2.65 g/cm³
+Mixed: 5 g/cm^3
+
+where:
+---------------------------------------------------------------------------
+G = the gravitational constant (6.67430 × 10^-11 N*m^2/kg^2)
+M = the mass of the meteoroid (kg)
+C = the drag coefficient (typically around 1.0 for a spherical object)
+A = the cross-sectional area of the meteoroid (m^2)
+ρ = the density of the meteoroid (kg/m^3)
+Assuming that the meteoroid is spherical, its cross-sectional area can be calculated as:
+
+A = π * (d/2)^2
+
+where d is the diameter of the meteoroid.
+
+Therefore, the formula can be rewritten as:
+2
+Velocity = sqrt((8 * G * π * M)/(3 * C * ρ * d^2))
+--------------------------------------------------------------------------
+
+
+order both csvs
+write code for rfe
+use rand forest with knn ang go further
+	
+		

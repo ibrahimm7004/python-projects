@@ -1,0 +1,13 @@
+from google.colab import drive
+drive.mount('/content/gdrive')
+import pandas as pd
+data = pd.read_csv('/content/eic.csv', encoding='cp1252')
+
+nRow, nCol = data.shape
+print(f'There are {nRow} rows and {nCol} columns')
+
+data.drop(0, axis=0, inplace = True)
+data.drop(['Empty', 'State', 'Bolide Type', 'URL', 'Notes'], axis=1, inplace=True)
+
+data = data.reset_index(level = None, drop = True, inplace = False, col_level = 0, col_fill = ' ')
+data.to_csv('/content/sample_data/dataset1.csv', index=False)   

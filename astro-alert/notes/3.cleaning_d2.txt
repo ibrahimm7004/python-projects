@@ -1,0 +1,19 @@
+from google.colab import drive
+drive.mount("/content/gdrive")
+import pandas as pd
+df = pd.read_csv("/content/raw_D2.csv")
+
+df= df.drop(df.index[289:952])
+df = df.drop(['Peak Brightness Date/Time (UT)', 'Altitude (km)','vx','vy','vz'], axis=1)
+df['Mass'] = df.apply(lambda row: (2*row['Calculated Total Impact Energy (kt)']) / (row['Velocity (km/s)'] ** 2), axis=1)
+
+column_index = 5  # index of the column you want to multiply
+multiplier = 1000000   # the integer you want to multiply with
+
+for i in df.index:
+    df.iloc[i, column_index] *= multiplier
+
+df["Mass"]=df["Mass"].astype(int)
+df["Mass (kg)"]=df["Mass"]
+df=df.drop(['Mass'],axis=1)
+df.to_csv('/content/sample_data/dataset2.csv', index=False)   

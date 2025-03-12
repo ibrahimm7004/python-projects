@@ -1,0 +1,35 @@
+import requests
+import csv
+import html5lib
+from bs4 import BeautifulSoup
+
+# Send a request to the webpage
+url = 'https://github.com/cjwinchester/earth-impact-data/blob/main/earth-impact-craters.csv#L2'
+r = requests.get(url)
+
+# Extract the HTML content
+html_content = r.content
+
+# Create a BeautifulSoup object and parse the HTML content
+soup = BeautifulSoup(html_content, 'html.parser')
+
+# Find the table element that contains the data
+table = soup.find('table')
+
+# Extract the data from the table
+data = []
+rows = table.find_all('tr')
+for row in rows:
+    cols = row.find_all('td')
+    cols = [col.text.strip() for col in cols]
+    data.append(cols)
+
+# Write the data to a CSV file with headers
+with open('crater_data.csv', 'w', newline='') as file:
+    writer = csv.writer(file)
+    headers = ['Empty', 'Crater Name', 'State', 'Country', 'Rock', 'Diameter (km)', 'Age (Ma)', 'Exposed', 'Drilled',
+               'Bolide Type', 'Latitude', 'Longitude', 'URL', 'Notes']
+    writer.writerow(headers)
+    writer.writerows(data)
+
+print("Data saved to crater_data.csv file.")
