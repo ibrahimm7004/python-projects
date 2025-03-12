@@ -1,0 +1,41 @@
+Correlation Matrix:
+
+def plotCorrelationMatrix(df, graphWidth):
+    df = df.dropna('columns') # drop columns with NaN
+    df = df[[col for col in df if df[col].nunique() > 1]] # keep columns where there are more than 1 unique values
+    if df.shape[1] < 2:
+        print(f'No correlation plots shown: The number of non-NaN or constant columns ({df.shape[1]}) is less than 2')
+        return
+    corr = df.corr()
+    plt.figure(num=None, figsize=(graphWidth, graphWidth), dpi=80, facecolor='w', edgecolor='k')
+    corrMat = plt.matshow(corr, fignum = 1)
+    plt.xticks(range(len(corr.columns)), corr.columns, rotation=90)
+    plt.yticks(range(len(corr.columns)), corr.columns)
+    plt.gca().xaxis.tick_bottom()
+    plt.colorbar(corrMat)
+    plt.show()
+
+plotCorrelationMatrix(df, 5)
+
+
+Remove Outliers: (Not working)
+
+def remove_outliers(df, features):
+    df_copy = df.copy()
+
+    for feature in features:
+
+        # Calculate q1, q3 and iqr
+        q3 = df[feature].quantile(0.75)
+        q1 = df[feature].quantile(0.25)
+        iqr = q3 - q1
+
+        # Get local minimum and maximum
+        local_min = q1 - (1.5 * iqr)
+        local_max = q3 + (1.5 * iqr)
+        # Remove the outliers
+        df_copy = df_copy[(df_copy[feature] >= local_min) & (df_copy[feature] <= local_max)]
+        return df_copy
+
+orbit_features = list(df.columns)
+orbit_df = remove_outliers(df, orbit_features)

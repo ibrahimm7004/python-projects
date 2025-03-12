@@ -1,0 +1,24 @@
+Scatter Plot(diameter and age, uses matplotlib):
+
+data.plot(kind='scatter',x='Age (Ma)',y='Diameter (km)',color='red')
+plt.show()
+
+----------------------------
+Heatmap (Uses matplot and seaborn):
+
+import seaborn as sns
+colormap = plt.cm.viridis
+sns.heatmap(data.corr(), annot=True, cmap=colormap)
+------------------------------
+
+I'm working on a data science project which is basically a python based application that predicts the impact of meteors falling on the earth. 
+
+I'm using 2 datasets relating to meteor impacts. Dataset 1 has the following features: Longitude, Latitude, Velocity, Mass, Impact Energy released, energy radiated.
+Dataset 2 has the following features: Longitude, Latitude, Velocity, Mass, Diameter, Country, Type of rock, Crater name, Age.
+Dataset 1 is being used to train a ML model using KNN, and on Dataset 2, I am using the trained model to predict a class. The class in question is Impact energy released, since that is the main missing feature from this dataset and is vital for the data analysis and visualizations I must do later on.
+
+This program will be an entire application made in python, its frontend shall be designed using pysimplegui. The user will be able to choose a location(according to longitude and latitude), and 
+In addition to this, there will be a frontend made in PySimpleGui as well.
+
+The only feature selection by user will be the location of impact, longitude and latitude wise. After getting this data, our program will use the past data (the datasets), and perhaps the KNN as well, to predict features for this location. I wanted that an entire dataset be generated for the user 's location, according to different velocities it may fall at, different sizes, masses, types of rock, diameters of the meteor, as well as combinations of these features as would be the case in an actual impact. However I would like some inspiration in this step. This is your first task, give me ideas of how best and creatively to make use of the datasets i have, and the user's assigned location. I don't have to generate a new dataset like i mentioned above, that is just an idea i had. Give me your ideas on what to do with the user's input and what service(s) I could provide to them. I would appreciate creativity here. I could implement some other ML algorithm OR an AI algorithm (understand the second task I've given you). Also, note that I am free to use more datasets if needed. Be creative and don't be afraid to give ambitious or out of the box solutions. Also remember that I must use data visualizations and analysis in this project as well. So perhaps there could be some use of that as well, but that is not all I have to implement.
+Your second task is giving me ideas to implement AI anywhere in this project. It could be in multiple places(that is actually preferable), however it could be just 1 AI concept/algorithm/search technique etc. I would prefer that I implement a good AI concept somewhere in the project where it actually makes a lot of sense, such that the AI part becomes almost vital to the project. This entire project started off as a project for my data science course, however now i want to make it such that i can use it for 2 courses as the project for those courses, both data science and AI. 
