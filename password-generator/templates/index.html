@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Password Generator</h1>
+        <p>This app generates strong passwords for you. Click the button below to get started!</p>
+        <form action="/generate_password" method="POST">
+            <button type="submit">Generate Password</button>
+        </form>
+        {% if password %}
+            <p class="password" onclick="copyToClipboard(this)" title="Click to copy">{{ password }}</p>
+        {% endif %}
+    </div>
+    <script>
+        function copyToClipboard(element) {
+            var text = element.innerText;
+            navigator.clipboard.writeText(text).then(function() {
+                alert('Password copied to clipboard!');
+            }, function(err) {
+                console.error('Unable to copy: ', err);
+            });
+        }
+    </script>
+</body>
+</html>
