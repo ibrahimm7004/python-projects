@@ -130,9 +130,3 @@ Sample row printed by Spark Consumer:
 By default, Spark can also write the stream to a file in `/data/` directory as `weather_output.json` every 60 seconds.
 
 ---
-
-## 📄 License & Citations
-
-See `academic_integrity.md` for details on licenses, library references, and API usage.
-
----
