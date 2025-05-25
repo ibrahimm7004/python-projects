@@ -1,0 +1,272 @@
+[
+    {
+        "city": "Islamabad",
+        "timestamp": 1748110618,
+        "clouds": 75,
+        "humidity": 84,
+        "visibility": 8000,
+        "score": 0.032,
+        "summary": "scattered clouds"
+    },
+    {
+        "city": "Multan",
+        "timestamp": 1748110018,
+        "clouds": 50,
+        "humidity": 71,
+        "visibility": 4000,
+        "score": 0.058,
+        "summary": "light rain"
+    },
+    {
+        "city": "Islamabad",
+        "timestamp": 1748109418,
+        "clouds": 50,
+        "humidity": 12,
+        "visibility": 10000,
+        "score": 0.44,
+        "summary": "scattered clouds"
+    },
+    {
+        "city": "Multan",
+        "timestamp": 1748108818,
+        "clouds": 50,
+        "humidity": 25,
+        "visibility": 4000,
+        "score": 0.15,
+        "summary": "scattered clouds"
+    },
+    {
+        "city": "Karachi",
+        "timestamp": 1748108218,
+        "clouds": 75,
+        "humidity": 43,
+        "visibility": 4000,
+        "score": 0.057,
+        "summary": "broken clouds"
+    },
+    {
+        "city": "Multan",
+        "timestamp": 1748107618,
+        "clouds": 50,
+        "humidity": 31,
+        "visibility": 4000,
+        "score": 0.138,
+        "summary": "haze"
+    },
+    {
+        "city": "Peshawar",
+        "timestamp": 1748107018,
+        "clouds": 25,
+        "humidity": 61,
+        "visibility": 6000,
+        "score": 0.175,
+        "summary": "light rain"
+    },
+    {
+        "city": "Multan",
+        "timestamp": 1748106418,
+        "clouds": 75,
+        "humidity": 78,
+        "visibility": 4000,
+        "score": 0.022,
+        "summary": "clear sky"
+    },
+    {
+        "city": "Karachi",
+        "timestamp": 1748105818,
+        "clouds": 0,
+        "humidity": 51,
+        "visibility": 4000,
+        "score": 0.196,
+        "summary": "light rain"
+    },
+    {
+        "city": "Multan",
+        "timestamp": 1748105218,
+        "clouds": 0,
+        "humidity": 17,
+        "visibility": 10000,
+        "score": 0.83,
+        "summary": "light rain"
+    },
+    {
+        "city": "Karachi",
+        "timestamp": 1748104618,
+        "clouds": 100,
+        "humidity": 41,
+        "visibility": 4000,
+        "score": 0.0,
+        "summary": "clear sky"
+    },
+    {
+        "city": "Islamabad",
+        "timestamp": 1748104018,
+        "clouds": 25,
+        "humidity": 15,
+        "visibility": 6000,
+        "score": 0.382,
+        "summary": "scattered clouds"
+    },
+    {
+        "city": "Islamabad",
+        "timestamp": 1748103418,
+        "clouds": 25,
+        "humidity": 54,
+        "visibility": 10000,
+        "score": 0.345,
+        "summary": "haze"
+    },
+    {
+        "city": "Karachi",
+        "timestamp": 1748102818,
+        "clouds": 100,
+        "humidity": 55,
+        "visibility": 8000,
+        "score": 0.0,
+        "summary": "broken clouds"
+    },
+    {
+        "city": "Multan",
+        "timestamp": 1748102218,
+        "clouds": 25,
+        "humidity": 30,
+        "visibility": 10000,
+        "score": 0.525,
+        "summary": "haze"
+    },
+    {
+        "city": "Islamabad",
+        "timestamp": 1748101618,
+        "clouds": 25,
+        "humidity": 20,
+        "visibility": 8000,
+        "score": 0.48,
+        "summary": "clear sky"
+    },
+    {
+        "city": "Lahore",
+        "timestamp": 1748101018,
+        "clouds": 75,
+        "humidity": 48,
+        "visibility": 6000,
+        "score": 0.078,
+        "summary": "haze"
+    },
+    {
+        "city": "Peshawar",
+        "timestamp": 1748100418,
+        "clouds": 25,
+        "humidity": 58,
+        "visibility": 10000,
+        "score": 0.315,
+        "summary": "haze"
+    },
+    {
+        "city": "Multan",
+        "timestamp": 1748099818,
+        "clouds": 0,
+        "humidity": 58,
+        "visibility": 4000,
+        "score": 0.168,
+        "summary": "clear sky"
+    },
+    {
+        "city": "Peshawar",
+        "timestamp": 1748099218,
+        "clouds": 25,
+        "humidity": 88,
+        "visibility": 4000,
+        "score": 0.036,
+        "summary": "scattered clouds"
+    },
+    {
+        "city": "Islamabad",
+        "timestamp": 1748098618,
+        "clouds": 75,
+        "humidity": 88,
+        "visibility": 6000,
+        "score": 0.018,
+        "summary": "light rain"
+    },
+    {
+        "city": "Multan",
+        "timestamp": 1748098018,
+        "clouds": 75,
+        "humidity": 16,
+        "visibility": 10000,
+        "score": 0.21,
+        "summary": "scattered clouds"
+    },
+    {
+        "city": "Lahore",
+        "timestamp": 1748097418,
+        "clouds": 75,
+        "humidity": 52,
+        "visibility": 6000,
+        "score": 0.072,
+        "summary": "scattered clouds"
+    },
+    {
+        "city": "Karachi",
+        "timestamp": 1748096818,
+        "clouds": 0,
+        "humidity": 57,
+        "visibility": 10000,
+        "score": 0.43,
+        "summary": "scattered clouds"
+    },
+    {
+        "city": "Karachi",
+        "timestamp": 1748096218,
+        "clouds": 100,
+        "humidity": 74,
+        "visibility": 4000,
+        "score": 0.0,
+        "summary": "broken clouds"
+    },
+    {
+        "city": "Lahore",
+        "timestamp": 1748095618,
+        "clouds": 25,
+        "humidity": 24,
+        "visibility": 10000,
+        "score": 0.57,
+        "summary": "haze"
+    },
+    {
+        "city": "Karachi",
+        "timestamp": 1748095018,
+        "clouds": 25,
+        "humidity": 53,
+        "visibility": 6000,
+        "score": 0.211,
+        "summary": "light rain"
+    },
+    {
+        "city": "Lahore",
+        "timestamp": 1748094418,
+        "clouds": 75,
+        "humidity": 78,
+        "visibility": 10000,
+        "score": 0.055,
+        "summary": "haze"
+    },
+    {
+        "city": "Peshawar",
+        "timestamp": 1748093818,
+        "clouds": 0,
+        "humidity": 54,
+        "visibility": 4000,
+        "score": 0.184,
+        "summary": "broken clouds"
+    },
+    {
+        "city": "Peshawar",
+        "timestamp": 1748093218,
+        "clouds": 100,
+        "humidity": 53,
+        "visibility": 4000,
+        "score": 0.0,
+        "summary": "clear sky"
+    }
+]
