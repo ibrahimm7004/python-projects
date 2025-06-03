@@ -1,0 +1,28 @@
+[2025-05-14T00:18:08.517+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: earthquake_etl_pipeline.store_data manual__2025-05-14T00:12:02.815284+00:00 [queued]>
+[2025-05-14T00:18:08.527+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: earthquake_etl_pipeline.store_data manual__2025-05-14T00:12:02.815284+00:00 [queued]>
+[2025-05-14T00:18:08.528+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2025-05-14T00:18:08.544+0000] {taskinstance.py:2191} INFO - Executing <Task(BashOperator): store_data> on 2025-05-14 00:12:02.815284+00:00
+[2025-05-14T00:18:08.552+0000] {standard_task_runner.py:60} INFO - Started process 219 to run task
+[2025-05-14T00:18:08.560+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'earthquake_etl_pipeline', 'store_data', 'manual__2025-05-14T00:12:02.815284+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/etl_pipeline.py', '--cfg-path', '/tmp/tmp_n7onvvc']
+[2025-05-14T00:18:08.565+0000] {standard_task_runner.py:88} INFO - Job 7: Subtask store_data
+[2025-05-14T00:18:08.651+0000] {task_command.py:423} INFO - Running <TaskInstance: earthquake_etl_pipeline.store_data manual__2025-05-14T00:12:02.815284+00:00 [running]> on host ac010fa9152e
+[2025-05-14T00:18:08.753+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='earthquake_etl_pipeline' AIRFLOW_CTX_TASK_ID='store_data' AIRFLOW_CTX_EXECUTION_DATE='2025-05-14T00:12:02.815284+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-05-14T00:12:02.815284+00:00'
+[2025-05-14T00:18:08.762+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-05-14T00:18:08.768+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/scripts/store_data.py']
+[2025-05-14T00:18:08.798+0000] {subprocess.py:86} INFO - Output:
+[2025-05-14T00:18:08.875+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2025-05-14T00:18:08.875+0000] {subprocess.py:93} INFO -   File "/opt/***/scripts/store_data.py", line 1, in <module>
+[2025-05-14T00:18:08.876+0000] {subprocess.py:93} INFO -     from pyspark.sql import SparkSession
+[2025-05-14T00:18:08.876+0000] {subprocess.py:93} INFO - ModuleNotFoundError: No module named 'pyspark'
+[2025-05-14T00:18:08.883+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2025-05-14T00:18:08.894+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 212, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-05-14T00:18:08.911+0000] {taskinstance.py:1138} INFO - Marking task as UP_FOR_RETRY. dag_id=earthquake_etl_pipeline, task_id=store_data, execution_date=20250514T001202, start_date=20250514T001808, end_date=20250514T001808
+[2025-05-14T00:18:08.945+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 7 for task store_data (Bash command failed. The command returned a non-zero exit code 1.; 219)
+[2025-05-14T00:18:08.989+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2025-05-14T00:18:09.025+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
