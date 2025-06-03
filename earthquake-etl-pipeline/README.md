@@ -1,10 +1,5 @@
 # Earthquake ETL Pipeline with Apache Airflow & Spark
 
-**Course**: DS463 - Data Engineering  
-**Assignment**: Homework 01  
-**Student ID**: 2021748
-**Due Date**: May 14, 2025
-
 ---
 
 ## 📌 Objective
