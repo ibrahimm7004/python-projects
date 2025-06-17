@@ -1,0 +1,24 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "shell",
+      "label": "build javafx",
+      "command": "javac",
+      "args": [
+        "--module-path",
+        "C:/openjfx-24.0.1_windows-x64_bin-sdk/javafx-sdk-24.0.1/lib",
+        "--add-modules",
+        "javafx.controls,javafx.fxml",
+        "-d",
+        "bin",
+        "src/HelloFX.java"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    }
+  ]
+}
